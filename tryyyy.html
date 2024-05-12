@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="project.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transition: opacity 1s ease-in-out;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        /* Other styles for your content */
+        .nav-bar, .footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+            color: white;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video background -->
+    <video id="video-background" autoplay loop muted>
+        <source src="v4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Your content -->
+    <div class="nav-bar">
+        <!-- Navigation bar content -->
+        <div class="logo">
+            <img src="logo.jpeg.jpg" class="logi" />
+          </div>
+          <a href="#" id="a1">Home</a>
+          <a href="contact.html" id="a1" class="contact-btn">Contact</a>
+          <a href="help.html" id="a1">Help</a>
+          <a href="t&c.html" id="a1">Terms & Conditions</a>
+          <i class="fa-solid fa-magnifying-glass" id="icn"></i>
+          <input type="text" placeholder="Search..." id="Srch" />
+          <div class="btn">
+            <a href="new.html" class="btn-1">Register</a>
+            <a href="hi.html" class="log btn">Login</a>
+          </div>
+    </div>
+
+    <div class="content">
+        <!-- Content here -->
+        <section class="banner">
+            <div class="text">
+              <h1>Your love story begins here.</h1>
+              <p id="cntent">
+                Heartsync is an online dating platform taking a quality over
+                <br />
+                quantity approach to the matchmaking process.If you're ready<br />
+                for more in your love life,take the first step today.
+              </p>
+            </div>
+          </section>
+    
+          <div class="boxes">
+            <div class="box-1">
+              <i class="fa-regular fa-circle-check fa-2x" id="check"></i>
+              <h1>Real Quality</h1>
+              <p class="verify">
+                Caterings To single looking for real,lasting connections. If you're
+                ready for a true quality over quantity experience --you're right
+                where you want to be.
+              </p>
+            </div>
+            <div class="box-1">
+              <i class="fa-solid fa-shield-halved fa-2x" id="check"></i>
+              <h1>Real People</h1>
+              <p class="verify">
+                All accounts profiles,and photos are 100% manually approved by our
+                team.If you're tired of unverified,low-effort profiles--you're going
+                to love this.
+              </p>
+            </div>
+            <div class="box-1">
+              <i class="fa-solid fa-heart fa-2x" id="check"></i>
+              <h1>Real Relationships</h1>
+              <p class="verify">
+                It's time that online dating helps you to build real relationships
+                and meaningful connections in a culture that glorifies
+                short-lived,surface level flings.
+              </p>
+            </div>
+          </div>
+    </div>
+
+    <div class="footer">
+        <div class="rsrc">
+            <h2>RESOURCE</h2>
+    
+            <a href="faq.html" class="links">FAQ's </a>
+          </div>
+          <div class="pricing">
+            <h2>PRICING</h2>
+            <a href="overview.html" class="links">Overview</a>
+          </div>
+          <div class="company">
+            <h2>COMPANY</h2>
+            <a href="aboutUS.html" class="links">About-us</a>
+          </div>
+          <div class="Social">
+            <h2>SOCIAL</h2>
+            <a href="https://www.facebook.com/login" class="links">Facebook </a>
+            <i class="fa-brands fa-facebook icon"></i><br /><br />
+            <a href="https://twitter.com/login" class="links">X </a>
+            <br /><br />
+            <a
+              href="https://www.instagram.com/accounts/login/"
+              class="links"
+              target="_blank"
+              >Instagram
+            </a>
+            <i class="fa-brands fa-instagram icon2"></i><br /><br />
+            <a href="https://www.linkedin.com/login" class="links" target="_blank"
+              >LinkedIn</a
+            >
+            <i class="fa-brands fa-linkedin-in icon3"></i><br /><br />
+          </div>
+        <!-- Footer content -->
+    </div>
+</body>
+</html>

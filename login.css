@@ -1,0 +1,101 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#login {
+    width: 90%;
+    max-width: 400px; /* Limit the width to prevent it from becoming too wide on large screens */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+    z-index: 1; /* Ensure the login form appears above the background */
+    text-align: center; /* Center the content */
+}
+
+#login input[type="text"],
+#login input[type="password"],
+#login button {
+    width: calc(100% - 20px); /* Subtract padding to prevent horizontal scrollbar */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e33376;
+    border-radius: 30px;
+    color: black;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#login button {
+    background-color: #e33376;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#login button:hover {
+    background-color: #ff758c; /* Adjust the hover color */
+}
+
+#other {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #e33376;
+}
+
+#other a {
+    text-decoration: none;
+    color: #e33376;
+    margin: 0 5px;
+}
+
+#other a:hover {
+    text-decoration: underline;
+}
+
+/* Additional CSS for responsiveness */
+
+@media screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    #login {
+        width: 90%;
+    }
+}
+
+/* Additional CSS for animation */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#login img {
+    width: 80%; /* Adjust the width */
+    max-width: 400px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    animation: pulse 2s infinite alternate;
+}

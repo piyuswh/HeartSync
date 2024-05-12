@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: pink; /* Set background color to pink */
+    background-image: url('ippro.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align items vertically */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Apply a blur effect to blend with the background */
+}
+
+#form-container {
+    width: 90%; /* Set width to 90% of the viewport width */
+    max-width: 400px; /* Set maximum width for larger screens */
+    padding: 40px;
+    border: 3px solid; /* Fixed typo: 'so' to 'solid' */
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    text-align: center; /* Center form elements */
+}
+
+.logo {
+    margin-bottom: 20px; /* Add some spacing between logo and form */
+}
+
+h1 {
+    text-align: center;
+    color: palevioletred; /* Adjust heading color */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid palevioletred;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="submit"] {
+    background-color: palevioletred;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d6006e;
+}
+
+input:hover {
+    background-color: pink;
+}
+
+.container #form-container img {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Set maximum width */
+    height: auto; /* Maintain aspect ratio */
+}

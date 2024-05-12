@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating Match</title>
+    <link rel="stylesheet" href="match.css">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="profile">
+        <div class="profile-image">
+            <img src="men1.jpg" alt="Male Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2>John Doe</h2>
+            <p>Age: 30</p>
+            <p>Preference: Female</p>
+            <p class="profile-description">Outdoor Enthusiast</p>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="like-button">Like</button>
+        <button class="dislike-button">Dislike</button>
+    </div>
+</div>
+<div id="heart-rain"></div> <!-- Container for heart rain -->
+
+<!-- Chat button -->
+<div class="chat-button">
+    <img src="chat.png" alt="Chat Icon">
+</div>
+
+<!-- Profile icon -->
+<div class="profile-icon">
+    <img src="pro.png" alt="Profile Icon">
+</div>
+
+<script>
+    const profiles = [
+        {
+            name: "John Doe",
+            age: 30,
+            preference: "Female",
+            description: "Outdoor Enthusiast",
+            image: "men1.jpg"
+        },
+        {
+            name: "Will Smith",
+            age: 18,
+            preference: "Female",
+            description: "Running,Watching movies",
+            image: "men2.jpg"
+        },
+        {
+            name: "Dwayne johnson",
+            age: 20,
+            preference: "Female",
+            description: "Hiking",
+            image: "men5.jpg"
+        },
+        {
+            name: "Adolf hitler",
+            age: 21,
+            preference: "Female",
+            description: "Playing gamest",
+            image: "hitler.png"
+        },
+        {
+            name: "Smith",
+            age: 25,
+            preference: "Female",
+            description: "Fashion",
+            image: "giga.jpg"
+        },
+        {
+            name: "Peter",
+            age: 19,
+            preference: "Female",
+            description: "chatting",
+            image: "men4.jpg"
+        },
+        {
+            name: "Naitik",
+            age: 23,
+            preference: "Female",
+            description: "Playing tennis",
+            image: "men5.jpg"
+        },
+        {
+            name: "Teresa",
+            age: 18,
+            preference: "Men",
+            description: "Outdoor Enthusiast",
+            image: "wo1.jpg"
+        },
+        {
+            name: "ella",
+            age: 19,
+            preference: "Men",
+            description: "Creativity",
+            image: "wo2.jpg"
+        },
+        {
+            name: "Kuldeep",
+            age: 20,
+            preference: "Female",
+            description: "writng",
+            image: "men6.jpg"
+        },
+        {
+            name: "Pranav",
+            age: 21,
+            preference: "Female",
+            description: "Foddie",
+            image: "cbum.jpg"
+        },
+        // Add more profiles as needed
+    ];
+
+    let currentProfileIndex = 0;
+
+    function loadProfile() {
+        const profile = profiles[currentProfileIndex];
+        const profileImage = document.querySelector('.profile-image img');
+        const profileName = document.querySelector('.profile-info h2');
+        const profileAge = document.querySelector('.profile-info p:nth-of-type(1)');
+        const profilePreference = document.querySelector('.profile-info p:nth-of-type(2)');
+        const profileDescription = document.querySelector('.profile-info .profile-description');
+
+        profileImage.src = profile.image;
+        profileName.textContent = profile.name;
+        profileAge.textContent = "Age: " + profile.age;
+        profilePreference.textContent = "Preference: " + profile.preference;
+        profileDescription.textContent = profile.description;
+    }
+
+    function nextProfile() {
+        currentProfileIndex++;
+        if (currentProfileIndex >= profiles.length) {
+            alert("No more profiles!");
+            return;
+        }
+        loadProfile();
+    }
+
+    const likeButton = document.querySelector('.like-button');
+    const dislikeButton = document.querySelector('.dislike-button');
+
+    likeButton.addEventListener('click', function() {
+        alert('Liked!');
+        nextProfile();
+    });
+
+    dislikeButton.addEventListener('click', function() {
+        alert('Disliked!');
+        nextProfile();
+    });
+
+    // Load the first profile when the page loads
+    loadProfile();
+
+    // Heart rain functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const likeButton = document.querySelector('.like-button');
+        const heartRainContainer = document.getElementById('heart-rain');
+
+        likeButton.addEventListener('click', function() {
+            startHeartRain();
+        });
+
+        function startHeartRain() {
+            for (let i = 0; i < 20; i++) { // Generate 20 hearts
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * window.innerWidth + 'px';
+                heart.style.animationDuration = Math.random() * 2 + 1 + 's'; // Randomize falling speed
+                heartRainContainer.appendChild(heart);
+            }
+
+            // Stop heart rain after 5 seconds (adjust as needed)
+            setTimeout(stopHeartRain, 5000);
+        }
+
+        function stopHeartRain() {
+            heartRainContainer.innerHTML = ''; // Remove all heart elements
+        }
+    });
+
+    // Redirect to chat page when chat button is clicked
+    const chatButton = document.querySelector('.chat-button');
+    chatButton.addEventListener('click', function() {
+        // Redirect to the chat page
+        window.location.href = 'chat.html'; // Replace 'chat.html' with the actual URL of your chat page
+    });
+
+    // Redirect to profile page when profile button is clicked
+    const profileIcon = document.querySelector('.profile-icon');
+    profileIcon.addEventListener('click', function() {
+        // Redirect to the profile page
+        window.location.href = 'picon'; // Replace 'profile.html' with the actual URL of your profile page
+    });
+</script>
+</body>
+</html>

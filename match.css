@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  object-fit: fill;
+  background-color: pink;
+  background-image: url('m3.jpg'); /* Add your background image URL here */
+  background-size: cover; /* Adjust background size */
+  background-position: center; /* Adjust background position */
+  background-repeat: no-repeat; /* Ensure background doesn't repeat */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Add a background color with opacity */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px; /* Increase container width */
+  position: relative;
+  overflow: hidden;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 200px; /* Increase image size */
+  height: 200px; /* Increase image size */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 40px; /* Increase space between image and info */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  padding: 15px 30px; /* Increase button padding */
+  font-size: 24px; /* Increase button font size */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.like-button {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.dislike-button {
+  background-color: #f44336;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.liked {
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.disliked {
+  transform: translateX(-100vw);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Heart rain */
+#heart-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure clicks pass through to elements below */
+}
+
+.heart {
+  position: absolute;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background-image: url('heart.png'); /* Replace with your heart image */
+  background-size: contain;
+  animation: heartFall linear infinite;
+}
+
+@keyframes heartFall {
+  0% {
+      transform: translateY(-20px) translateX(0) rotate(0deg);
+      opacity: 1;
+  }
+  25% {
+      transform: translateY(-20px) translateX(50px) rotate(90deg);
+  }
+  50% {
+      transform: translateY(-20px) translateX(0) rotate(180deg);
+  }
+  75% {
+      transform: translateY(-20px) translateX(-50px) rotate(270deg);
+  }
+  100% {
+      transform: translateY(calc(100vh + 20px)) translateX(0) rotate(360deg);
+      opacity: 0;
+  }
+}
+
+.chat-button {
+  position: fixed;
+  top: 20px; /* Adjust top position */
+  right: 20px; /* Adjust right position */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.chat-button img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.profile-icon {
+  position: fixed;
+  top: 20px; /* Adjust top position */
+  right: 80px; /* Adjust right position */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.profile-icon img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}

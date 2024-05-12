@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="pi.css">
+</head>
+<body>
+  <!-- Clouds -->
+  <div class="clouds">
+    <div class="cloud" style="top: 10%; left: 20%; width: 200px; height: 100px; animation-duration: 20s;"></div>
+    <div class="cloud" style="top: 20%; left: 60%; width: 250px; height: 120px; animation-duration: 15s;"></div>
+    <div class="cloud" style="top: 30%; left: 40%; width: 220px; height: 110px; animation-duration: 18s;"></div>
+    <div class="cloud" style="top: 50%; left: 70%; width: 240px; height: 120px; animation-duration: 17s;"></div>
+    <div class="cloud" style="top: 70%; left: 30%; width: 260px; height: 130px; animation-duration: 16s;"></div>
+    <div class="cloud" style="top: 70%; left: 30%; width: 260px; height: 130px; animation-duration: 16s;"></div>
+    <div class="cloud" style="top: 70%; left: 30%; width: 260px; height: 130px; animation-duration: 16s;"></div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <div class="profile">
+      <img src="men1.jpg" alt="Profile Picture" id="profilePic">
+      <h1 id="username">John Doe</h1>
+      <p id="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec gravida dolor.</p>
+      <p id="dob">Date of Birth: January 1, 1990</p>
+      <p id="hobbies">Hobbies: Reading, Cooking, Traveling</p>
+      <p id="gmail">Gmail: example@gmail.com</p>
+      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button id="saveBtn" onclick="saveChanges()">Save</button>
+    </div>
+    <form id="editForm" class="editable">
+      <label for="editUsername">Username:</label>
+      <input type="text" id="editUsername" value="John Doe"><br>
+      <label for="editBio">Bio:</label>
+      <textarea id="editBio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec gravida dolor.</textarea><br>
+      <label for="editDOB">Date of Birth:</label>
+      <input type="text" id="editDOB" value="January 1, 1990"><br>
+      <label for="editHobbies">Hobbies:</label>
+      <input type="text" id="editHobbies" value="Reading, Cooking, Traveling"><br>
+      <label for="editGmail">Gmail:</label>
+      <input type="text" id="editGmail" value="example@gmail.com"><br>
+    </form>
+  </div>
+
+  <script>
+    function enableEdit() {
+      document.getElementById('editForm').style.display = 'block'; // Show the editable form
+      document.getElementById('saveBtn').style.display = 'block'; // Show the save button
+      document.getElementById('editBtn').style.display = 'none'; // Hide the edit button
+
+      // Get the current profile information
+      var username = document.getElementById('username').innerText;
+      var bio = document.getElementById('bio').innerText;
+      var dob = document.getElementById('dob').innerText;
+      var hobbies = document.getElementById('hobbies').innerText.split(': ')[1]; // Extract hobbies from text
+      var gmail = document.getElementById('gmail').innerText.split(': ')[1]; // Extract gmail from text
+
+      // Set the values in the editable form
+      document.getElementById('editUsername').value = username;
+      document.getElementById('editBio').value = bio;
+      document.getElementById('editDOB').value = dob;
+      document.getElementById('editHobbies').value = hobbies; // Set hobbies value
+      document.getElementById('editGmail').value = gmail; // Set gmail value
+    }
+
+    function saveChanges() {
+  // Get the edited values from the form
+  var editedUsername = document.getElementById('editUsername').value;
+  var editedBio = document.getElementById('editBio').value;
+  var editedDOB = document.getElementById('editDOB').value;
+  var editedHobbies = document.getElementById('editHobbies').value;
+  var editedGmail = document.getElementById('editGmail').value;
+
+  // Update the profile information with the edited values
+  document.getElementById('username').innerText = editedUsername;
+  document.getElementById('bio').innerText = editedBio;
+  document.getElementById('dob').innerText = 'Date of Birth: ' + editedDOB;
+  document.getElementById('hobbies').innerText = 'Hobbies: ' + editedHobbies;
+  document.getElementById('gmail').innerText = 'Gmail: ' + editedGmail;
+
+  // Hide the editable form and save button, and show the edit button again
+  document.getElementById('editForm').style.display = 'none';
+  document.getElementById('saveBtn').style.display = 'none';
+  document.getElementById('editBtn').style.display = 'block';
+}
+</script>
+</body>
+</html>
+     

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="perf.css">
+</head>
+<body>
+    <div class="background">
+        <div id="outer">
+            <div class="animated-text">
+                <p>Looking for your perfect match?</p>
+                <p>Fill in your preferences below!</p>
+            </div>
+            <form id="preferences-form">
+                <div id="inner">
+                    Looking for:
+                    <select id="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Others</option>
+                    </select><br/><br/>
+                    Age:
+                    <input type="number" id="age" min="18" max="90"><br/><br/>
+                    Interests:
+                    <input type="text" id="interests"><br/><br/>
+                    <input type="submit" value="Next">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('preferences-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission behavior
+
+                // Get form inputs
+                const gender = document.getElementById('gender').value;
+                const age = document.getElementById('age').value;
+                const interests = document.getElementById('interests').value;
+
+                // Redirect to match page with qury parameters
+                window.location.href = `match1.html`;
+            });
+        });
+    </script>
+</body>
+</html>
+

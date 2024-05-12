@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #a1 {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    padding-right: 20px;
+    color: #e33376;
+  }
+  .logi {
+    border: none;
+    height: 58px;
+    object-fit: cover;
+    padding-top: 5px;
+    padding-right: 100px;
+  }
+  
+  .nav-bar {
+    background-color: white;
+    height: 62px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .btn-1 {
+    background-color: rgb(230, 225, 225);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #e33376;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-1:hover {
+    background-color: #ffcad4;
+    color: #e33376;
+  }
+  .btn {
+    color: #e33376;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 30px;
+    display: flex;
+    border: none;
+  }
+  .log {
+    background-color: #ffcad4;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+  }
+  .log:hover {
+    background-color: #e33376;
+    color: #ffcad4;
+  }
+  
+  #Srch {
+    height: 30px;
+    border: 1px solid #e33376;
+    border-radius: 0px 10px 10px 0px;
+    width: 280px;
+    margin-right: 110px;
+  }
+  #icn {
+    background-color: #ffcad4;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 4px 0px 4px;
+    border: 1px solid #e33376;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 15px;
+    color: #e33376;
+    margin-left: 200px;
+  }
+  .links {
+    text-decoration: none;
+    color: #fff;
+  }
+  #icn:hover {
+    background-color: #e33376;
+    color: #ffcad4;
+  }
+  .footer {
+    background-color: #e33376;
+  }
+  ::-webkit-input-placeholder {
+    color: #e33376;
+  }
+  .footer {
+    background-color: #e33376;
+    color: #fff;
+  }
+  .footer {
+    margin-top: 40px;
+    background-color: #e33376;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .rsrc {
+    color: #fff;
+  }
+  h2 {
+    margin-bottom: 40px;
+    color: black;
+  }
+  p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .icon {
+    margin-left: 20px;
+    background-color: #0073cf;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
+  }
+  .icon1 {
+    margin-left: 35px;
+    background-color: #1da1f2;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 2px;
+  }
+  .icon2 {
+    margin-left: 20px;
+    padding: 2px;
+    cursor: pointer;
+  }
+  .icon3 {
+    margin-left: 25px;
+    background-color: #0077b5;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  i {
+    font-size: 20px;
+  }
+  .banner .waves {
+    position: absolute;
+    margin-top: 10px;
+    width: 100%;
+    left: 0;
+  }
+  .banner {
+    background-image: url(bgp3.jpg);
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  .banner .waves {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+  }
+  .text {
+    margin-top: 110px;
+    margin-left: 60px;
+    color: #e33376;
+    font-size: 40px;
+  }
+  #cntent {
+    font-size: 32px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+    margin-top: 20px;
+  }
+  .boxes {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .box-1 {
+    height: 300px;
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 85px;
+    border-radius: 35px;
+    box-shadow: 12px 12px 15px 5px rgb(101, 99, 99);
+    background-image: url(bgp3.jpg);
+    background-position: center;
+    overflow: hidden;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.9s ease-in;
+  }
+  .box-1:hover {
+    cursor: pointer;
+    background: #fff;
+    transition: 0.2s all;
+  }
+  #check {
+    color: #e33376;
+    margin-left: 18%;
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+  }
+  h1 {
+    margin-left: 30px;
+  }
+  .verify {
+    margin-left: 30px;
+    font-size: 20px;
+    margin-top: 12px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+  }
+  h2 {
+    margin-top: 10px;
+  }
+  
+  #profile {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(40, 212, 40);
+    padding: 13px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 1px 3px 10px lightgreen;
+    margin-top: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Post Upload Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://wallpaperaccess.com/full/5232906.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  .form-group input[type="file"] {
+    border: none;
+    padding: 0;
+  }
+  .form-group input[type="submit"] {
+    background-color:#0056b3;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .form-group input[type="submit"]:hover {
+    background-color: #e33376;
+  }
+  .form-group p {
+    margin-top: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Upload Your Post</h2>
+  <form id="postForm" action="#">
+    <div class="form-group">
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="caption">Caption:</label>
+      <input type="text" id="caption" name="caption" placeholder="Enter caption for your post">
+    </div>
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" placeholder="Enter your location">
+    </div>
+    <div class="form-group">
+      <label for="postImage">Upload Image/Video:</label>
+      <input type="file" id="postImage" name="postImage" accept="image/, video/">
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Upload Post">
+    </div>
+  </form>
+</div>
+
+<script>
+  document.getElementById('postForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const bio = document.getElementById('bio').value;
+    const caption = document.getElementById('caption').value;
+    const location = document.getElementById('location').value;
+    const postImage = document.getElementById('postImage').value;
+    // Assuming you have a function to upload the post with the provided data
+    uploadPost(bio, caption, location, postImage);
+    // Redirect or perform any other action after uploading the post
+    alert('Post uploaded successfully!');
+  });
+
+  function uploadPost(bio, caption, location, postImage) {
+    console.log('Post uploaded:');
+    console.log('Bio:', bio);
+    console.log('Caption:', caption);
+    console.log('Location:', location);
+    console.log('Post Image:', postImage);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .profile h1 {
+    margin: 0;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .profile p {
+    margin: 5px 0;
+    transition: color 0.3s ease-in-out;
+  }
+
+  #editBtn, #saveBtn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  #editBtn:hover, #saveBtn:hover {
+    background-color: #0056b3;
+  }
+
+  #editBtn {
+    margin-bottom: 10px;
+  }
+
+  #editForm {
+    display: none;
+  }
+
+  .editable {
+    display: none;
+  }
+
+  .editable input, .editable textarea {
+    width: calc(100% - 20px);
+    margin: 5px 0 10px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Cloud animation */
+  .clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; /* Make clouds non-interactive */
+  }
+
+  .cloud {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 50%;
+    pointer-events: none; /* Make clouds non-interactive */
+    animation: moveCloud linear infinite alternate;
+  }
+
+  /* Cloud animation keyframes */
+  @keyframes moveCloud {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(110%);
+    }
+  }

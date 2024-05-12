@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      .video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 30px;
+        padding: 20px;
+        background-color: aliceblue;
+        margin-top: 30px;
+      }
+
+      .clr {
+        color: #e33376;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <video class="video-background" autoplay muted loop>
+      <source src="background vedio.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+      <h1 class="clr">Help</h1>
+
+      <h2 class="clr">Frequently Asked Questions (FAQs)</h2>
+      <ul>
+        <li>
+          <strong class="clr">How do I create an account?</strong><br />
+          To create an account, click on the "Sign Up" button on the homepage
+          and follow the instructions to fill out the registration form.
+        </li>
+        <li>
+          <strong class="clr">How can I edit my profile?</strong><br />
+          After logging in, go to your profile page and click on the "Edit
+          Profile" button. You can then update your information and preferences.
+        </li>
+        <li>
+          <strong class="clr">How do I upload photos?</strong><br />
+          When editing your profile, there will be an option to upload photos.
+          Click on it, select the photos you want to upload from your device,
+          and then save your changes.
+        </li>
+        <li>
+          <strong class="clr">How can I contact other users?</strong><br />
+          You can send messages to other users by visiting their profiles and
+          clicking on the "Send Message" button.
+        </li>
+        <li>
+          <strong class="clr">How do I report a user?</strong><br />
+          If you encounter any suspicious or inappropriate behavior, you can
+          report the user by clicking on the "Report User" button on their
+          profile page.
+        </li>
+      </ul>
+
+      <h2 class="clr">Contact Us</h2>
+      <p>
+        If you have any other questions or need further assistance, please feel
+        free to <a href="contact.html">contact us</a>.
+      </p>
+    </div>
+  </body>
+</html>

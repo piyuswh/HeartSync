@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartsyn.coc</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <video autoplay muted loop id="video-background">
+        <source src="v4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="login">
+        <img src="logo.jpeg.jpg">
+        <div id="idp">
+            <input type="text"  placeholder="Username" required><br/>
+            <input type="password" placeholder="Password" required><br/>
+            <button type="button" onclick="login()" required>Login </button>
+            <br/>
+            <br/>
+            <div id="other">
+                <input type="checkbox" >Remember Me<br/><br/>
+                <a href="forgot.html" >Forgot Id</a>&nbsp; &nbsp;&nbsp;&nbsp;
+                <a href="new.html">New user</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login() {
+            // Get the values of the username and password fields
+            var username = document.querySelector('#idp input[type="text"]').value;
+            var password = document.querySelector('#idp input[type="password"]').value;
+
+            // Check if the username and password are correct
+            if (username === 'xyz' && password === '123') {
+                // Redirect the user to the homepage
+                window.location.href = 'match1.html';
+            } else {
+                // Display an error message
+                alert('Invalid username or password');
+            }
+        }  
+    </script>
+</body>
+</html>

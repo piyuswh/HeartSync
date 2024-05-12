@@ -1,0 +1,321 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0; 
+}
+
+@media(min-width: 990px){
+.container{
+    width: 990px;
+    margin: 60px auto;
+    display: flex;
+    gap: 24px;
+    
+}
+.feed{
+    width: 560px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 14px;
+    margin-bottom: 28px;
+}
+.feed-img{
+    width: 100%;
+    border-radius: 14px;
+}
+
+.profile{
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.user{
+    height: 50px;
+    border-radius: 50%;
+}
+.username{
+    font-size: 14px;
+    color: rgb(84, 84, 84);
+    text-decoration: none;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    cursor:pointer;
+    overflow: hidden;
+}
+.story-container{
+    width: 990px;
+    margin: 30px auto;
+    display: flex;
+    gap:16px;
+
+}
+.bi-heart {
+    transition: fill 0.4s ease-in-out;
+  }
+  
+.story{
+    text-align: center;
+   
+}
+
+.comment-section{
+    display:;
+    position:;
+    top: 40px; /* Adjust this value to position the comment section */
+    left: 0;
+    background-color:;
+    padding: 10px;
+    border:1px black;
+    color:;
+    border-radius:10%;
+}
+.chatb{
+    background-color: #e33376;
+    border-radius:10%;
+}
+
+p{
+font-size: large;
+font-style: oblique;
+}
+.send-icon {
+    fill: currentColor;
+    transition: fill 0.3s ease;
+}
+.send-icon.clicked {
+    background:;
+    border-radius:25%;
+}
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.bookmark-icon {
+    cursor: pointer;
+}
+.saved {
+    background: black;
+    border-radius: 15%;
+}
+  .heart-icon:hover {
+    fill:; /* Default color */
+  } 
+ 
+.heart-icon.clicked {
+    fill: ; /* Pink color when clicked */
+    background: #e33376;
+    border-radius:30%;
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+ .story-img{
+    height: 84px;
+    border-radius: 50%;
+    border:5px black solid;
+    /* -webkit-transition: -webkit-transform 1s; */
+}
+ .story-img:hover{
+    border:5px solid #e33376; 
+  -webkit-transform: rotate(360deg); 
+  cursor: pointer;
+} 
+.btn{
+    color: #ff0062;
+    text-decoration: none;
+}
+.btn:hover{
+    color: pink;
+ background-color:  #e33376;
+ 
+ /* transform: rotate(360deg); */
+}
+.search-container {
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+  }
+  /* Style for the search input field */
+  .search-input {
+    width: 100%;
+    padding-right: 40px; /* Adjust to accommodate the search icon */
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+    border: 1px solid #ccc; /* Border for input field */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline */
+    height: 40px; /* Adjust height as needed */
+    font-size: 16px; /* Adjust font size as needed */ 
+  }
+  /* Style for the search button */
+  .search-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; /* Adjust size as needed */
+    height: 100%;
+    background-color:#e33376; /* Background color for search button */
+    border: none;
+    border-radius: 0 5px 5px 0; /* Rounded corners, right side */
+    cursor: pointer;
+  }
+  
+  /* Style for the search icon */
+  .search-button i {
+    font-size: 18px; /* Adjust size as needed */
+    color: #fff; /* Text color of the icon */
+    line-height: 40px; /* Vertically center the icon */
+  }
+   
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 990px;
+}
+.logo{
+    height: 84px;
+    padding-top: 8px;
+}
+.btn{
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    font-size: 16px;
+    padding: 16px 30px;
+}
+
+
+}
+.chats1{
+    height:65px;
+    /* width:40px; */
+    border-radius:50%;
+    cursor:pointer;
+    border:3px solid black;
+    color:black;
+}
+.chatsusername{
+    text-decoration: none;
+}
+.chatsusername:hover{
+    cursor:pointer;
+}
+.kul{
+    display: flex;
+    gap:16px;
+}
+.chats2{
+    height:65px;
+    /* width:40px; */
+    border-radius:50%;
+}
+.chats{
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-between; */
+    gap:16px;
+}
+
+.title{
+    margin-top: 0;
+}
+.app{
+    display: flex;
+    gap: 8px;
+}
+.link{
+    height: 38px;
+}
+}
+
+/* small screen  */
+@media(max-width: 990px){
+    .sidebar{ 
+    text-align: center;
+    }
+    .feed{
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 14px;
+        margin-bottom: 28px;
+    }
+    .feed-img{
+        width: 100%;
+        border-radius: 14px;
+    }
+    .profile{
+        display: flex;
+        gap: 6px;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+    .user{
+        height: 50px;
+        border-radius: 50%;
+    }
+     .username{
+        font-size: 14px;
+        color: rgb(84, 84, 84);
+        text-decoration:none;
+    } 
+     .username a{
+        text-decoration: none;
+      }
+    .story-container{
+        width: 100%;
+        overflow: auto;
+        margin: 30px auto;
+        display: flex;
+        gap: 16px;
+    } 
+     .story{
+        text-align: center;
+    } 
+     .story-img{
+        height: 34px;
+        border-radius:50%;
+    
+    }
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px auto;
+    }
+    .logo{
+        height: 34px;
+        padding-top: 8px;
+    }
+    .btn{
+        background-color: #fff;
+        border: 1px solid lightgray;
+        border-radius: 12px;
+        font-size: 16px;
+        padding: 16px 30px;
+    }
+    .title{
+        margin-top: 0;;
+    }
+    .app{
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    .link{
+        height: 38px;
+    } 
+}
