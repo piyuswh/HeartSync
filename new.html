@@ -31,30 +31,8 @@
             </form>
         </div>
     </div>
-    <script>
-        document.getElementById('signinForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            
-            // Retrieve form field values
-            var username = document.getElementById('username').value;
-            var mobile = document.getElementById('mobile').value;
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-            
-            // Perform basic validation
-            if (!username || !mobile || !email || !password) {
-                alert('Please fill out all fields.');
-                return;
-            }
-            
-            // Additional validation (e.g., email format)
-            // Implement as needed
-            
-            // If all validation passes, redirect to the login page
-            // You can change 'login.html' to the actual login page URL
-           
-        });
-    </script>
+</body>
+</html>
     
 
     </script>
