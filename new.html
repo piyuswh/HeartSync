@@ -26,11 +26,17 @@
                     <input type="password" id="password" placeholder="Password" required>
                 </div>
                 <div class="form-group">
-                    <a href="profile.html">sign in</a>
-                </div>
-            </form>
-        </div>
-    </div>
+           <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function redirectToPreferences(event) {
+      event.preventDefault(); // Prevent default form submission
+      // You can replace 'preferences.html' with the path to your preferences page
+      window.location.href = 'perf.html';
+    }
+  </script>
 </body>
 </html>
     
