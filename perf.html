@@ -36,14 +36,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('preferences-form');
             form.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent default form submission behavior
+                event.preventDefault(); 
 
-                // Get form inputs
+           
                 const gender = document.getElementById('gender').value;
                 const age = document.getElementById('age').value;
                 const interests = document.getElementById('interests').value;
 
-                // Redirect to match page with qury parameters
+         
                 window.location.href = `match1.html`;
             });
         });
