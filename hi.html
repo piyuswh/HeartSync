@@ -30,15 +30,16 @@
 
     <script>
         function login() {
+           
             var username = document.querySelector('#idp input[type="text"]').value;
             var password = document.querySelector('#idp input[type="password"]').value;
 
-          
-            if (username === 'xyz' && password === '123') {
             
+            if (username === 'xyz' && password === '123') {
+                
                 window.location.href = 'match1.html';
             } else {
-               
+                
                 alert('Invalid username or password');
             }
         }  
