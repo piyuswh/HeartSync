@@ -9,11 +9,11 @@
 <body>
     <div class="container">
         <div class="background">
-            <!-- Particle elements -->
+            
             <div class="particle" style="top: 20%; left: 40%; animation-duration: 10s;"></div>
             <div class="particle" style="top: 40%; left: 60%; animation-duration: 12s;"></div>
             <div class="particle" style="top: 60%; left: 80%; animation-duration: 15s;"></div>
-            <!-- Add more particles as needed -->
+           
         </div>
         <div class="content">
             <h1>Forgot Password?</h1>
@@ -27,28 +27,27 @@
     </div>
 
     <script>
-        // JavaScript code
+       
         document.getElementById("forgotPasswordForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting
+            event.preventDefault(); 
 
-            // Get the email input value
+            
             var email = document.getElementById("email").value;
 
-            // Validate email format
+            
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 alert("Please enter a valid email address.");
                 return;
             }
 
-            // You can add further validation or send the reset password request here
-            // For demonstration purposes, we'll simply log the email
+        
             console.log("Reset password request for email:", email);
 
-            // Clear the form
+        
             document.getElementById("email").value = "";
 
-            // Optional: Show a confirmation message
+            
             alert("Password reset link sent to " + email);
         });
     </script>
