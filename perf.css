@@ -31,7 +31,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Center items vertically */
+    flex-direction: column; 
     height: 100vh;
 }
 
@@ -39,8 +39,8 @@ body {
     text-align: center;
     color: #fff;
     font-size: 24px;
-    animation: slideIn 2s ease-out forwards; /* Animation for text */
-    opacity: 0; /* Initially hidden */
+    animation: slideIn 2s ease-out forwards; 
+    opacity: 0; 
 }
 
 @keyframes slideIn {
@@ -59,7 +59,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin-top: 20px; /* Add some space between text and form */
+    margin-top: 20px; 
 }
 
 #inner {
@@ -105,18 +105,18 @@ input[type="submit"] {
     background-color: #66afe9;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s; /* Add transition for smooth color change */
+    transition: background-color 0.3s; 
 }
 
 input[type="submit"]:hover {
-    animation: pulse 0.5s infinite alternate; /* Add animation on hover */
+    animation: pulse 0.5s infinite alternate; 
 }
 
 @keyframes pulse {
     0% {
-        background-color: #ff758c; /* Initial color */
+        background-color: #ff758c; 
     }
     100% {
-        background-color: #ff6699; /* New color */
+        background-color: #ff6699; 
     }
 }
