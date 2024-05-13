@@ -21,19 +21,20 @@ body {
 
 #login {
     width: 90%;
-    max-width: 400px; 
+    max-width: 400px; /* Limit the width to prevent it from becoming too wide on large screens */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     position: relative;
-    z-index: 1; 
-    text-align: center; 
+    z-index: 1; /* Ensure the login form appears above the background */
+    text-align: center; /* Center the content */
+}
 
 #login input[type="text"],
 #login input[type="password"],
 #login button {
-    width: calc(100% - 20px);
+    width: calc(100% - 20px); 
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #e33376;
@@ -72,7 +73,7 @@ body {
 
 
 @media screen and (max-width: 600px) {
-   
+    
     #login {
         width: 90%;
     }
@@ -95,6 +96,7 @@ body {
 #login img {
     width: 80%; 
     max-width: 400px; 
-    height: auto;
+    height: auto; 
     animation: pulse 2s infinite alternate;
 }
+
