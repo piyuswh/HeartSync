@@ -21,26 +21,25 @@ body {
 
 #login {
     width: 90%;
-    max-width: 400px; /* Limit the width to prevent it from becoming too wide on large screens */
+    max-width: 400px; 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     position: relative;
-    z-index: 1; /* Ensure the login form appears above the background */
-    text-align: center; /* Center the content */
-}
+    z-index: 1; 
+    text-align: center; 
 
 #login input[type="text"],
 #login input[type="password"],
 #login button {
-    width: calc(100% - 20px); /* Subtract padding to prevent horizontal scrollbar */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #e33376;
     border-radius: 30px;
     color: black;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
 }
 
 #login button {
@@ -51,7 +50,7 @@ body {
 }
 
 #login button:hover {
-    background-color: #ff758c; /* Adjust the hover color */
+    background-color: #ff758c; 
 }
 
 #other {
@@ -70,16 +69,16 @@ body {
     text-decoration: underline;
 }
 
-/* Additional CSS for responsiveness */
+
 
 @media screen and (max-width: 600px) {
-    /* Adjustments for smaller screens */
+   
     #login {
         width: 90%;
     }
 }
 
-/* Additional CSS for animation */
+
 
 @keyframes pulse {
     0% {
@@ -94,8 +93,8 @@ body {
 }
 
 #login img {
-    width: 80%; /* Adjust the width */
-    max-width: 400px; /* Limit the maximum width */
-    height: auto; /* Maintain aspect ratio */
+    width: 80%; 
+    max-width: 400px; 
+    height: auto;
     animation: pulse 2s infinite alternate;
 }
