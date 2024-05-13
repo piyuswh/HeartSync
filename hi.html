@@ -30,16 +30,15 @@
 
     <script>
         function login() {
-            // Get the values of the username and password fields
             var username = document.querySelector('#idp input[type="text"]').value;
             var password = document.querySelector('#idp input[type="password"]').value;
 
-            // Check if the username and password are correct
+          
             if (username === 'xyz' && password === '123') {
-                // Redirect the user to the homepage
+            
                 window.location.href = 'match1.html';
             } else {
-                // Display an error message
+               
                 alert('Invalid username or password');
             }
         }  
